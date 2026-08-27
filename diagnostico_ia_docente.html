@@ -360,7 +360,7 @@ async function loadAllRecords(){
       if(multiIds.indexOf(q.id) !== -1){
         a[q.id] = String(v).split(';').map(s => s.trim()).filter(Boolean);
       } else if(scale4Ids.indexOf(q.id) !== -1){
-        a[q.id] = scale4IndexFromLabel(v);
+        a[q.id] = Number(v);
       } else if(q.type === 'likert'){
         a[q.id] = Number(v);
       } else {
